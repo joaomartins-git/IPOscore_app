@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="default">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>IPOScore</title>
+</head>
+<body>
+    <div align="center" layout:fragment="content" class="row" >
+        <div class="col-xs-8 col-md-8">
+            <h1>IPOScore Information</h1>
+            <a href="/new">Add new Patient Data</a>
+            <br/><br/>
+            <table border="1" cellpadding="10">
+                <thead>
+                    <tr>
+                        <th>IPONumber</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="patient : ${patients}">
+                        <td><a th:text="${patient.IPONumber}" th:href="@{'/patientsInfo/' + ${patient.IPONumber}}"></a></td>
+                        <td th:text="${patient.age}"></td>
+                        <td th:text="${patient.gender}"></td>
+
+                        <td>
+                            <a th:href="/@{'/edit/' + ${patient.IPONumber}}">Edit</a>
+                            
+                            <a th:href="/@{'/delete/' + ${patient.IPONumber}}">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>   
+    </div>   
+</body>
+</html>

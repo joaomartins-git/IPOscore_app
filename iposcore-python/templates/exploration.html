@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <script type="text/javascript" src="javascript/initExploration.js"></script>
+    <script type="text/javascript" src="javascript/parallel_coordinates.js"></script>
+    <script type="text/javascript" src="javascript/histogram.js"></script>
+    <script type="text/javascript" src="javascript/violin.js"></script>
+    <script type="text/javascript" src="javascript/boxplot.js"></script>
+    <script type="text/javascript" src="javascript/d3Visualizations/dropdown.js"></script>
+    <link rel="stylesheet" href="css/parallel_coordinates.css">
+    <link rel="stylesheet" href="css/containers.css">
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row centered">
+            <h2>Data Exploration</h2>
+        </div>
+        <div class="row centered">
+            <div class="col-sm-3" id="data_type"> Data Type -> </div>
+            <div class="col-sm-3" id="attribute_selector"> Attribute -> </div>
+            <div class="col-sm-3" id="visualization"> Visualization -> </div>
+            <div class="col-sm-3" id="class_label_dropdown"> Class Label -> </div>
+        </div>
+    </div>
+    <!-- Content -->
+    <div class="content-svgs container-fluid"></div>
+    <script> initExploration( {{data | safe}} ) </script>
+{% endblock %}

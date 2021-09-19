@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+    <title>IPOscore</title>
+    <meta name="author" content="Leonardo Alexandre">
+    <meta name="description" content="Web app developed for Porto's IPO usage">
+    <script type="text/javascript" src="javascript/d3/jquery-3.4.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="javascript/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/d3/d3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="javascript/d3/d3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="javascript/d3/d3-tip.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="javascript/d3/d3-tip.js" charset="utf-8"></script>
+    <link rel="shortcut icon" type="image/png"  href="images/favicon.ico"/>
+    <!-- <link rel="shortcut icon" href="/images/favicon.ico"/>  -->
+    <!-- <link rel="icon" href="data:;base64,iVBORw0KGgo="> -->
+
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/containers.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/tooltip.css">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="main-container">
+        <!-- Navbar -->
+        <nav class="navbar navbar-light nav_body">
+            <a class="navbar-brand text-white" href="">
+                <img src="images/logo.png" width="120" height="35" class="d-inline-block align-top" alt="">
+            </a>
+            <div class="navbar-nav mr-auto">
+                <a class="nav-link text-white" href="">Home <span class="sr-only"></span></a>
+            </div>
+            <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link text-white" href="/feature_ranking">Feature Ranking</a>
+                </div>
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link text-white" href="/exploration">Data Exploration</a>
+                </div>
+            </div>
+        </nav>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
