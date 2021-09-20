@@ -18,13 +18,13 @@ $ conda activate <env>
 
 After installing the required dependencies and activating your freshly created environment you should be able to run our app. 
 
-You can see our interface for the clinical decision support system by running and accessing http://127.0.0.1:8050/:
+<!--You can see our interface for the clinical decision support system by running and accessing http://127.0.0.1:8050/: -->
 
 ```
 $ python main.py
 ```
 
-**Note**: The webapp is also available for online use, hosted by Heroku at https://iposcore.herokuapp.com/
+<!-- **Note**: The webapp is also available for online use, hosted by Heroku at https://iposcore.herokuapp.com/ -->
 
 
 ---
